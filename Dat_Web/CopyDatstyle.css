@@ -1,0 +1,518 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+} */
+/* Menu Webpage Style */
+.space2{
+    margin-top: 100px;
+}
+.space{
+    margin-top: 300px;
+}
+.space3{
+    margin-top: 400px;
+}
+
+.main{
+    margin-top: 20px;
+}
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* NAVBAR COLOR/STYLE */
+nav{
+    align-items: flex-end;
+    position: fixed;
+    top: 0px;
+    background-color: rgb(123, 50, 50);
+    width: 100%;
+    z-index: 9999;
+}
+
+/* DBM LOGO IN NAVBAR */
+label.logo > img {
+     position: absolute;
+     top: -15px;
+     left: 0px;
+    height: 110px;
+    width: 100px;
+    object-fit: contain;
+}
+
+/* Nav positioning */
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+/* Expanded navigation bar */
+nav ul li{
+    position: relative;
+    display:inline-block;
+    line-height: 90px;
+    margin: 0 10px;
+}
+
+/* Mini nav bar styles */
+nav ul li a.styl{
+    font-size: larger;
+    color:  #ab6d08fc;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition:ease .3s;
+}
+
+/* NAVBAR > LIST > UNDERLINE */
+nav ul li a.styl::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+    height: 4px;
+    background:#ab6d08fc;
+    border-radius: 30px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .6s;
+}
+nav ul li a.styl:hover{
+    color: #521d1d;
+    transition: ease .3s;
+}
+
+        /* Nav bar hovered */
+nav ul li a.styl:hover::after{
+    transform-origin: left;
+  transform: scaleX(1);
+} 
+
+
+
+
+.checkbtn{
+    font-size: 30px;
+    color: #ab6d08fc;
+    float:right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left:50px;
+    }
+
+    nav ul li a {
+       font-size:16px; 
+    }
+}
+
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+    
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(123, 50, 50);
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition:all .5s;
+
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+
+    #check:checked~ul{
+        left: 0;
+    }
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    overflow:   scroll;
+  }
+
+
+  /* scroll animation */
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  } 
+.scroll-watcher{
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(108, 44, 44);
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+
+    animation-timeline: scroll();
+    transform-origin: left;
+}
+@keyframes scroll-watcher{
+    to {scale: 1 1; }
+}
+
+
+/* body and text style */
+body{
+    min-height: 100vh;
+    background-color: rgba(111, 65, 0, 0.278);
+}
+
+.body2{
+    min-height: 100vh;
+    
+    background-color:  rgb(123, 50, 50);
+}
+
+h1{
+
+    width: fit-content;
+    color: #932b2b;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2{
+    margin: auto;
+    width: fit-content;
+    color: #9d650bfc;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+h3{
+    margin: auto;
+    width: fit-content;
+    font-size: larger;
+    color: #9d650bfc;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h5{
+    margin: auto;
+    font-size: 200px;
+    width: fit-content;
+    color: rgb(134, 49, 49);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h6{
+    position: relative;
+    margin-left: 500px;
+    color: #850b0b;
+}
+
+.PhotoScroller{
+    margin: auto;
+   max-width: 1500px;
+   /* outline: 3px solid red; */
+}
+
+
+.scroller_inner{
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+/* FOODTO SCROLLER STYLE */
+
+.PhotoScroller[data-animated="true"]{
+    overflow: hidden;
+    /* -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
+   
+}
+
+
+.PhotoScroller[data-animated="true"] .scroller_inner{
+   width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 30s)
+    var(--_animation-direction, forwards) linear infinite;
+
+}
+
+
+.PhotoScroller[data-animated="true"] .scroller_inner:hover{
+    animation-play-state: paused;
+}
+
+
+/* FOODTO PHOTO STLYE */
+
+  /* NOT HOVERED */
+  .PhotoScroller[data-animated="true"] .scroller_inner> img.photozone{
+    transition:ease .6s;
+}
+
+.PhotoScroller[data-animated="true"] .scroller_inner > img.photoz2{
+    transition:ease .6s;
+}
+.PhotoScroller[data-animated="true"] .scroller_inner > img.photoz3{
+    transition:ease .6s;
+}
+.PhotoScroller[data-animated="true"] .scroller_inner > img.photoz4{
+    transition:ease .6s;
+}
+.PhotoScroller[data-animated="true"] .scroller_inner> img.photoz5{
+    transition:ease-in-out .6s;
+}
+.PhotoScroller[data-animated="true"] .scroller_inner> img.photoz6{
+    transition:ease .6s;
+}
+
+.PhotoScroller[data-animated="true"] .scroller_inner> img.photoz7{
+    transition:ease .6s;
+}
+
+.PhotoScroller[data-animated="true"] .scroller_inner > img.photoz8{
+    transition:ease .6s;
+}
+
+          /* HOVERED */
+          .PhotoScroller[data-animated="true"] .scroller_inner> img.photozone:hover{
+    
+            height: 800px;
+            width: 600px;
+            opacity: 80%;
+            transition:ease .6s;
+        }
+        .PhotoScroller[data-animated="true"] .scroller_inner > img.photoz2:hover {
+            height: 800px;
+            width: 600px;
+        
+            opacity: 80%;
+            transition:ease .6s;
+        }
+        .PhotoScroller[data-animated="true"] .scroller_inner > img.photoz3:hover{
+            height: 800px;
+            width: 600px;
+        
+            opacity: 80%;
+            transition:ease .6s;
+        }
+        .PhotoScroller[data-animated="true"] .scroller_inner > img.photoz4:hover{
+            height: 800px;
+            width: 600px;
+            opacity: 80%;
+            transition:ease .6s;
+        }
+        .PhotoScroller[data-animated="true"] .scroller_inner> img.photoz5:hover{
+            height: 800px;
+            width: 600px;
+            opacity: 80%;
+            transition:ease-in-out .6s;
+        }
+        .PhotoScroller[data-animated="true"] .scroller_inner> img.photoz6:hover{
+            height: 800px;
+            width: 600px;
+            opacity: 80%;
+            transition:ease .6s;
+        }
+        
+        .PhotoScroller[data-animated="true"] .scroller_inner> img.photoz7:hover{
+            height: 800px;
+            width: 600px;
+         
+            opacity: 50%;
+            transition:ease .6s;
+        }
+        
+        .PhotoScroller[data-animated="true"] .scroller_inner > img.photoz8:hover{
+            height: 800px;
+            width: 600px;
+            opacity: 50%;
+            transition:ease .6s;
+        }
+        
+        
+
+
+@keyframes scroll{
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+
+}
+
+.Foodto > img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    
+
+}
+
+.MENU > img{
+    width: 20px;
+    
+}
+
+/* .MENU */
+
+
+
+.Baoster > img{
+    display: block;
+    margin: auto;
+}
+
+
+
+
+/*logo and menu style*/
+.DBM{
+    display: block;
+    margin: auto;
+    width: 225px;
+    animation: fade-out linear;
+    animation-timeline: view(); 
+    animation-range: exit -100px;
+    
+}
+@keyframes fade-out{
+    to {opacity:0;}
+}
+
+.food{
+    position: relative;
+    overflow: hidden;
+}
+
+.food > img{
+    position: relative;
+    float: right;
+    width:100%;
+    height: 500px;
+    object-fit: cover;
+    transition: 400ms ease-in-out;
+    
+}
+.food > .contentFood{
+    position: absolute;
+   
+    inset: 0;
+    font-size: 100px;
+    color:#ae710ffc;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.food:hover > img.ZOut{
+
+    transform: scale(1.1);
+  
+    
+}
+
+
+/* Click Hungry Button */
+.MenuButton{
+    font-size: x-large;
+    color: #9d650bfc;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #932b2b;
+    border: none;
+    height: 100px;
+    width:100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.MenuButton:hover{
+    color:#932b2b; 
+    background-color: #ab6d08fc;
+}
+
+
+/* Location animated*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.locations{
+    position: relative;
+    overflow: hidden;
+}
+.locations > img{
+    display: block;
+    width: 450px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+.locations > .content{
+    position: absolute;
+    overflow: hidden;
+    inset: 0;
+    font-size: xx-large;
+    color: #932b2b;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 1rem;
+    background:  rgba(255,255,255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.locations > img, .locations > .content{
+    transition: 200ms ease-in-out;
+}
+.locations:hover > img.zoom{
+    transform: scale(1.1);
+}
+.locations > .content.fade{
+    opacity: 0;
+}
+.locations:hover > .content.fade{
+    opacity: 1;
+}
+
+
+
+
+
