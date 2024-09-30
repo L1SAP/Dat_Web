@@ -1,10 +1,10 @@
-/* *{
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-} */
+}
 /* Menu Webpage Style */
 .space2{
     margin-top: 100px;
@@ -154,7 +154,6 @@ nav ul li a.styl:hover::after{
 
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -252,16 +251,7 @@ h6{
 /* FOODTO SCROLLER STYLE */
 
 .PhotoScroller[data-animated="true"]{
-    overflow: hidden;
-    /* -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
-   
+    overflow: hidden;  
 }
 
 
@@ -310,7 +300,7 @@ h6{
     transition:ease .6s;
 }
 
-          /* HOVERED */
+        /* HOVERED */
           .PhotoScroller[data-animated="true"] .scroller_inner> img.photozone:hover{
     
             height: 800px;
@@ -385,15 +375,18 @@ h6{
 
 }
 
+
+
+
+/* .MENU */
 .MENU > img{
     width: 20px;
     
 }
 
-/* .MENU */
 
 
-
+/* Baoster style */
 .Baoster > img{
     display: block;
     margin: auto;
@@ -446,10 +439,10 @@ h6{
 
 .food:hover > img.ZOut{
 
-    transform: scale(1.1);
-  
-    
+    transform: scale(1.1);  
 }
+
+
 
 
 /* Click Hungry Button */
@@ -468,6 +461,8 @@ h6{
     color:#932b2b; 
     background-color: #ab6d08fc;
 }
+
+
 
 
 /* Location animated*/
@@ -514,5 +509,10 @@ h6{
 
 
 
-
-
+.WhineBox{
+    color:#932b2b;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px
+}

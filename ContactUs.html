@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-<div id = "mySidebar" class = "sidebar" >
-    <a href="javascript:void(0)" class="CloseSide" onclick="hideSidebar()">&times; </a>
-    <a href="DatBan.html">Home</a>
-    <a href="Menu.html">Menu</a>
-    <a href="AboutUs.html">About Us</a>
-    <a href="inside.html">What's Inside?</a>
-    
-          
-</div>
+ <nav>
+    <input type="checkbox" id = "check">
+    <label for="check" class="checkbtn">
+        <i class="Bars">&#9776;</i>
+    </label>
+    <label class="logo"><img src="imgs/DBM.png" alt=""></label>
+      <ul>
+        <li><a class="styl" href="Menu.html">Menu</a></li>
+        <!-- <li><a class="styl" href="#">What's inside?</a></li> -->
+        <li><a class="styl" href="DatBan.html">Home</a></li>
+      </ul>
+  </nav>
 
 <div id="main">
 <button class="OpnSide" onclick="openSidebar()">&#9776; </button>
-<div class="">
+    
+    <div class="">
     <button onclick="scrollWin()">Scroll to</button>
     <img class = "DBM" src="imgs/DBM.png" alt="=grandpa">
     <img src="imgs/VOG.jpeg" alt="">
-<h1>Đạt grew up in a modest household, surrounded by the aromatic scents of his grandmother's kitchen, where he learned the secrets of traditional Vietnamese cuisine. From a young age, Đạt harbored dreams of one day sharing these flavors with the world.
+        <h1>Đạt grew up in a modest household, surrounded by the aromatic scents of his grandmother's kitchen, where he learned the secrets of traditional Vietnamese cuisine. From a young age, Đạt harbored dreams of one day sharing these flavors with the world.
     As Đạt grew older, he witnessed the economic challenges facing his family and community. Determined to seek a better life, Đạt made the bold decision to immigrate to the United States. With nothing but his culinary skills and a heart full of hope, Đạt embarked on a journey to the land of opportunity.
     Arriving in America was not easy for Đạt. He faced language barriers, cultural differences, and the harsh realities of starting anew in a foreign land. However, Đạt's resilience and passion for cooking never wavered. He found work in various restaurants, soaking up knowledge like a sponge and honing his craft with every dish he prepared.
     After years of hard work and saving every penny he could, Đạt finally realized his dream of opening his own restaurant. With the support of his community and the unwavering belief in his culinary heritage, Đạt opened " Đạt Bánh mì" – a cozy Vietnamese eatery nestled in the heart of a vibrant neighborhood.
@@ -25,18 +29,19 @@
     Soon, people from all walks of life flocked toĐạt Bánh mì, drawn not only by the delicious food but also by Đạt’s infectious passion and unwavering hospitality. His restaurant became a melting pot of cultures, where strangers become friends over steaming bowls of noodles and laughter filled the air.
     As Đạt Bánh mì flourished, Đạt American dream came true. He not only found success as a restaurateur but also became a beloved member of his community, a symbol of perseverance, and a testament to the power of chasing one's dreams.
     Today, Đạt Phạm’ s journey serves as an inspiration to many – a reminder that with hard work, determination, and a sprinkle of love, anything is possible, even turning a humble bowl of noodles into a taste of the American dream.
-    </h1>
-
- </div>
+        </h1>
+    </div>
 </div>
 
-    <head>
-        <script src="myscript.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
+ <head>
+ <script src="myscript.js"></script>
+<link rel="stylesheet" href="CopyDatstyle.css">
+</head>
 
 <body>
-    
+    <form>
+        <label for="WhineBox">Had a bad ban?:</label>
+        <textarea class="WhineBox" rows="5" cols="100" placeholder="We're starving to know..."></textarea>
+    </form> 
 </body>
 </html>

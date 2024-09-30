@@ -1,3 +1,4 @@
+// Menu open and close animation
 const openSidebar = () => {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
@@ -14,10 +15,7 @@ const hideSidebar = () => {
 };
 
 
-function scrollWin() {
 
-  window.scrollTo(0,500);
-}
 
 // FoodTo Scroller
 
