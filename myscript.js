@@ -1,24 +1,4 @@
-// Menu open and close animation
-const openSidebar = () => {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-};
-
-const allSidebar = () =>{
-  document.getElementById("mySidebar").style.width = "500px";
-  document.getElementById("main").style.marginLeft = "500px";
-}
-
-const hideSidebar = () => {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-};
-
-
-
-
 // FoodTo Scroller
-
 const Scrollers = document.querySelectorAll(".PhotoScroller");
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
